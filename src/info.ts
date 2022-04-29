@@ -62,8 +62,26 @@ export type InfoType = {
 };
 
 export const Info: InfoType = {
-  contacts: [],
-  languages: [],
+  contacts: [
+    { type: 'ContactPhone', text: '+7 (910) 131-40-26', link: 'tel:+79101314026' },
+    { type: 'Telegram', text: 'Telegram', link: 'https://t.me/kosheyaka' },
+    { type: 'Email', text: 'Email', link: 'mailto:koshey0@gmail.com' },
+    { type: 'LinkedIn', text: 'LinkedIn', link: 'https://www.linkedin.com/in/kosheyaka' },
+    { type: 'GitHub', text: 'GitHub', link: 'https://github.com/Kosheyaka' },
+  ],
+  languages: [
+    {
+      flag: '🇺🇸',
+      title: 'English',
+      level: 'B1+? Reading and hearing are fine, but I should practice speaking more. ' +
+        'It should be enough to complete tasks and participate in daily meetings.',
+      cert: {
+        certName: 'EF SET Certificate (C1 @ 2019)',
+        certLink: 'https://www.efset.org/cert/pBcTwg',
+      },
+    },
+    { flag: '🇷🇺', title: 'Russian', level: 'Native' },
+  ],
   education: {
     fullName: '',
     faculty: '',
