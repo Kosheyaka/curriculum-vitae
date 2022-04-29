@@ -1,9 +1,10 @@
 import List from '@mui/material/List';
 import * as React from 'react';
+import { IContact } from '../../info';
 import ListItemCV from './ListItemCV';
 
-const ListCV = ({ contacts }) => {
-  const renderListItem = (contact, index) => <ListItemCV contact={ contact } key={ index }/>;
+const ListCV = ({ contacts }: { contacts: IContact[] }) => {
+  const renderListItem = (contact: IContact, index: number) => <ListItemCV contact={ contact } key={ index }/>;
 
   return (
     <List>

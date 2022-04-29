@@ -1,11 +1,11 @@
 import { Box, Paper } from '@mui/material';
-import { ComponentClass } from 'react';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
 import * as React from 'react';
 import useStyles from '../../styles';
 import BlockHeader from './BlockHeader';
 
 const BlockWrapper = (
-  { inner, text, iconType }: { inner: ComponentClass; text: string; iconType: string; }
+  { inner, text, iconType }: { inner: OverridableComponent<any>; text: string; iconType: string; }
 ) => {
   const InnerComponent = inner;
   const classes = useStyles();

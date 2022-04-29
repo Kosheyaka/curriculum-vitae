@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Grid } from '@mui/material';
+import * as React from 'react';
+import BlockWrapper from './components/Block/BlockWrapper';
+import Header from './header/Header';
+import ContactsCV from './columnLeft/ContactsCV';
+import EducationCV from './columnLeft/EducationCV';
+import LanguagesCV from './columnLeft/LanguagesCV';
+import JobPreferencesCV from './columnRight/JobPreferencesCV';
+import TechStackCV from './columnRight/TechStackCV';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () =>
+  (
+    <Container maxWidth="md">
+      <Box sx={ { my: 4 } }>
+        <Grid container spacing={ 2 }>
+
+          <Grid item xs={ 14 }>
+            <Header/>
+          </Grid>
+
+          <Grid item xs={ 4 }>
+            <BlockWrapper inner={ ContactsCV } text={ 'Contacts' } iconType={ 'Contacts' }/>
+            <BlockWrapper inner={ LanguagesCV } text={ 'Languages' } iconType={ 'Language' }/>
+            <BlockWrapper inner={ EducationCV } text={ 'Education' } iconType={ 'School' }/>
+          </Grid>
+
+          <Grid item xs={ 8 }>
+            <BlockWrapper inner={ JobPreferencesCV } text={ 'Job Preferences' } iconType={ 'Work' }/>
+            <BlockWrapper inner={ TechStackCV } text={ 'Tech stack' } iconType={ 'HomeRepairService' }/>
+          </Grid>
+
+        </Grid>
+      </Box>
+    </Container>
   );
-}
 
 export default App;
